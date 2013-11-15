@@ -1,0 +1,67 @@
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 14px;
+  background-color: #c8d6fc;
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.nav-tabs {
+  border: none;
+  >li,
+  >li.active {
+    a.ms-btn {
+      margin-bottom: 10px;
+      padding: 4px;
+      border-radius: 2px;
+      border-bottom: 2px solid #000;
+      border-right: 2px solid #000;
+      border-top: 2px solid #FFF;
+      background: #EBE8D9;
+      border-left: 2px solid #FFF;
+      
+      &:first-letter {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+body {
+  background: #ECE9D8;
+  height: 1000px;
+  font-family: monospace, sans-serif;
+}
+
+.file-list {
+  display: inline-block;
+  background: white;
+  border: 2px solid #868585;
+  width: 750px;
+  height: 450px;
+  overflow: scroll;
+  
+  thead {
+    background: #ECE9D8;
+    th {
+      border-right: 2px solid #868585;
+      border-bottom: 2px solid #868585;
+      font-family: monospace, sans-serif;
+    }
+  }
+}
+
+.tab-content {
+  height: 450px;
+}
+
+.tab-pane {
+  border: 2px solid #BBB4A2;
+  width: 94%;
+  height: inherit;
+
+  table {
+    
+  }
+}

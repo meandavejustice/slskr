@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="public/lib/twitter-bootstrap-3.0.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="public/css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+          <a href="">Upload</a>
+          <a href="">About</a>
+        </header>
+        <div class="container">
+
+          <div class="row">
+            <div class="col-xs-8">
+
+
+              <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                
+                <li class="active"><a href="#yours" class="btn ms-btn"data-toggle="tab">Your Files</a></li>
+                <li><a href="#theirs" class="btn ms-btn" data-toggle="tab">Swarm Files</a></li>
+              </ul>
+              <div id="my-tab-content" class="tab-content">
+                <div class="tab-pane active" id="yours">
+                  <table class="table file-list">
+                    <thead>
+                      <tr class="labels">
+                        <th class="file-name">Filename</th>
+                        <th class="size">Size</th>
+                        <th class="host">Host</th>
+                        <th class="type">Filetype</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <div class="tab-pane" id="theirs">
+                  <table class="table file-list">
+                    <thead>
+                      <tr class="labels">
+                        <th class="file-name">Filename</th>
+                        <th class="size">Size</th>
+                        <th class="host">Host</th>
+                        <th class="type">Filetype</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <script type="text/x-handlebars-template" id="table-row">
+          <tr>
+            <td class="name">{{name}}</td>
+            <td class="size">{{size}}</td>
+            <td class="host">{{host}}</td>
+            <td class="type">{{type}}</td>
+          </tr>
+        </script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="/public/lib/twitter-bootstrap-3.0.0/js/tab.js"></script>
+        <script src="/public/js/bundle.js"></script>
+    </body>
+</html>
