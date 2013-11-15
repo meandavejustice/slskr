@@ -1,11 +1,9 @@
 var through = require('through')
-var levelup = require('levelup')
-var leveljs = require('level-js')
 var rusha = require('./rusha')
 var ui = require('./ui')
+var db = require('./client_db');
 
-window.db = levelup('slsk', { db: leveljs, valueEncoding: 'json' })
-
+window.db = db;
 var db = window.db
 
 files(document.body)
@@ -156,9 +154,6 @@ function dbDelete(db) {
     db.del(key, function(err, data) {
       if (err) console.error(err)
     })
-    db.del(key, function(err, data) {
-      if (err) console.error(err)
-    })
     var index = [];
     db.get('index', function(err, value) {
       index = value
@@ -180,3 +175,4 @@ function dbDelete(db) {
       $(document).trigger('new-file', file)
     })
 })()
+
